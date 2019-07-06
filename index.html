@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Title -->
+    <title>Alpha | Responsive Admin Dashboard Template</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Responsive Admin Dashboard Template" />
+    <meta name="keywords" content="admin,dashboard" />
+    <meta name="author" content="Steelcoders" />
+
+    <!-- Styles -->
+    <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css" />
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
+    <link href="assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <!-- Theme Styles -->
+    <link href="assets/css/alpha.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div class="loader-bg"></div>
+    <div class="loader">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mn-content fixed-sidebar">
+        <header class="mn-header navbar-fixed">
+            <nav class="blue-grey darken-3">
+                <div class="nav-wrapper row">
+                    <section class="material-design-hamburger navigation-toggle">
+                        <a href="#" data-activates="slide-out"
+                            class="button-collapse show-on-large material-design-hamburger__icon">
+                            <span class="material-design-hamburger__layer"></span>
+                        </a>
+                    </section>
+                    <a class="header-title valign-wrapper col s3" href="/">
+                        <img class="left valign center" src="assets/images/logo.png">
+                        <span class="chapter-title col s11 flow-text"><span class="deep-orange-text  text-lighten-1"
+                                style="display: inline;">cp.</span>netgowifi</span>
+                    </a>
+
+                    <ul class="right col s9 m3 nav-right-menu">
+                        <li><a href="javascript:void(0)" data-activates="chat-sidebar"
+                                class="chat-button show-on-large"><i class="material-icons">help_outline</i></a></li>
+                        <li><a href="javascript:void(0)" data-activates="chat-sidebar"
+                                class="chat-button show-on-large"><i class="material-icons">notifications</i></a></li>
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+
+        <aside id="slide-out" class="side-nav white fixed">
+            <div class="side-nav-wrapper" style="padding-bottom:0">
+
+                <div class="sidebar-profile">
+                    <div class="sidebar-profile-image">
+                        <img src="assets/images/profile-image-3.jpg" class="circle" alt="Фото пользователя">
+
+                    </div>
+                    <div class="sidebar-profile-info">
+                        <a href="" class="account-settings-link">
+                            <p>Михаил Дроботов</p>
+                            <span>ldarksoull@yandex.ru<i class="material-icons right">arrow_drop_down</i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <hr class="sidebar-separator">
+                <ul class="sidebar-menu collapsible collapsible-accordion">
+                    <li class="no-padding active">
+                        <a href="#" class="waves-effect waves-grey active notify">
+                            <i class="material-icons">home</i>
+                            <span class="sidebar-menu-item-name">Мониторинг сервиса</span>
+                            <i class="material-icons error-icon">error</i>
+                        </a>
+
+                    </li>
+                    <li class="no-padding">
+                        <a href="list.html" class="waves-effect waves-grey">
+                            <i class="material-icons">list</i>
+                            <span class="sidebar-menu-item-name">Общий список</span>
+                        </a>
+                    </li>
+                    <li class="no-padding">
+                        <a href="dilers.html" class="waves-effect waves-grey">
+                            <i class="material-icons">people</i>
+                            <span class="sidebar-menu-item-name">Дилеры</span>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="sidebar-separator">
+                <ul class="sidebar-menu collapsible collapsible-accordion">
+                    <li class="no-padding">
+                        <a href="#" class="waves-effect waves-grey">
+                            <i class="material-icons">home</i>
+                            <span class="sidebar-menu-item-name">Заведения</span>
+                        </a>
+                    </li>
+                    <li class="no-padding">
+                        <a href="#" class="waves-effect waves-grey">
+                            <i class="material-icons">people</i>
+                            <span class="sidebar-menu-item-name">Владельцы</span>
+                        </a>
+                    </li>
+                    <li class="no-padding">
+                        <a href="#" class="waves-effect waves-grey">
+                            <i class="material-icons">attach_money</i>
+                            <span class="sidebar-menu-item-name">Финансы и оплаты</span>
+                        </a>
+                    </li>
+                    <li class="no-padding">
+                        <a href="#" class="waves-effect waves-grey">
+                            <i class="material-icons">settings</i>
+                            <span class="sidebar-menu-item-name">Оборудование</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="mn-inner ">
+            <style>
+                .header {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .header .block.-left {
+                    margin-right: auto;
+                }
+
+                .header .block.-right {
+                    display: flex;
+                    align-items: center;
+                    margin-left: auto;
+                }
+
+                .header .block .page-title.page-title_new {
+                    margin-bottom: 0;
+                }
+
+                .header .block .tel {
+                    color: #0277bb;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin-right: 15px;
+                }
+
+                .personal-account {
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    line-height: 30px;
+                    text-align: center;
+                    background-color: #607d8b;
+                    color: #fff;
+                    border-radius: 2px;
+                    font-weight: normal;
+                }
+
+                .bottom-tools {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+
+                .shop-selected {
+                    color: #000000;
+                    font-size: 14px;
+                    font-family: Roboto;
+                    font-weight: 400;
+                }
+
+                .shop-selected .bold {
+                    font-weight: 700;
+                }
+
+                .shop-selected .total-sum {
+                    color: #4999cd;
+                    font-weight: 700;
+                }
+
+                .button-pay-container {
+                    margin-left: 30px;
+                }
+
+                .button-pay {
+                    padding: 0 30px;
+                    line-height: 35px;
+                    border: none;
+                    border-radius: 2px;
+                    color: #fff;
+                    background-color: #26a69a;
+                    text-transform: none;
+                    box-sizing: border-box;
+                    font-weight: normal;
+                }
+
+                .page-title {
+                    margin: 0;
+                }
+
+                .status {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                    display: inline-block;
+                }
+
+                .status-enabled {
+                    background: rgb(14, 216, 41);
+                }
+
+                .status-disabled {
+                    background: rgb(216, 37, 13);
+                }
+
+                .server {
+                    transition: 0.2s;
+                }
+
+                .server:hover, .server:focus {
+                    cursor: pointer;
+                    background: rgba(0, 0, 0, 0.26) !important;
+                }
+
+                @media (max-width: 768px) {
+                    .header {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
+                    .header .block.-right {
+                        margin-right: 0;
+                        margin-left: 0;
+                    }
+
+                    .header .block.-left {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                @media (max-width: 630px) {
+                    .header .block.-right {
+                        flex-direction: column;
+                        align-items: baseline;
+                    }
+                }
+
+                @media (max-width: 580px) {
+                    .bottom-tools {
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+
+                    .button-pay-container {
+                        margin-top: 10px;
+                    }
+                }
+            </style>
+
+            <!--
+        <link rel='stylesheet' href='/point/item/users.list.period.css' type="text/css"/>
+        <link rel='stylesheet' href='/point/item/users.list.tabel-filter.css' type="text/css"/>
+        <link rel='stylesheet' href='/point/item/tabel-elements-styles.css' type="text/css"/>
+        <link rel='stylesheet' href='/point/item/users.list.button-new.css' type="text/css"/>
+        <link rel='stylesheet' href='/point/item/users.list.select-date.css' type="text/css"/>
+        <link rel='stylesheet' href='/point/item/users.list.calendar.css' type="text/css"/>-->
+
+            <div class="row">
+                <div class="col s12">
+                    <div class="header">
+                        <div class="block -left">
+                            <div class="page-title page-title_new">Мониторинг сервиса</div>
+                        </div>
+                        <div class="block -right">
+                            <button class="dropdown-button button-new" data-activates="download">Скачать</button>
+                            <ul class="dropdown-content" id="download">
+                                <li><a href="#">PDF</a></li>
+                                <li><a href="#">XLS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="card no-m-b">
+                        <div class="card-content">
+                            <div id="example_wrapper" class="dataTables_wrapper">
+                                <div class="tabel-wrap">
+                                    <table class="striped dataTable datatable-example" role="grid">
+                                        <thead>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1"
+                                                aria-label="Adress: activate to sort column descending"
+                                                aria-sort="ascending">Имя сервера</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1"
+                                                aria-label="Name: activate to sort column ascending"
+                                                aria-sort="descending">Название(функция)</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1"
+                                                aria-label="Category: activate to sort column ascending"
+                                                aria-sort="ascending">IP адрес адаптера</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1"
+                                                aria-label="Total: activate to sort column ascending"
+                                                aria-sort="ascending">Статус</th>
+                                        </thead>
+                                        <tbody class="js-list">
+                                            <tr class="server modal-trigger" data-target="modal1">
+                                                <td>Биллинг</td>
+                                                <td>Биллинг</td>
+                                                <td>10.0.0.253</td>
+                                                <td><span class="status status-enabled"></span>Активен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal2">
+                                                <td>CHR</td>
+                                                <td>Сервер доступа (для sstp туннелей)</td>
+                                                <td>10.0.0.254; 95.213.150.139</td>
+                                                <td><span class="status status-enabled"></span>Активен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal3">
+                                                <td>DB</td>
+                                                <td>Будущий сервер с базами данных</td>
+                                                <td>10.0.0.200</td>
+                                                <td><span class="status status-disabled"></span>Неактивен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal4">
+                                                <td>Debian-test</td>
+                                                <td>Тестовая виртуалка</td>
+                                                <td>10.0.0.3</td>
+                                                <td><span class="status status-enabled"></span>Активен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal5">
+                                                <td>Gitlab</td>
+                                                <td>Репозиторий с кодом</td>
+                                                <td>10.0.0.95; 192.168.122.1</td>
+                                                <td><span class="status status-enabled"></span>Активен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal6">
+                                                <td>Jira</td>
+                                                <td>Менеджер задач</td>
+                                                <td>10.0.0.99</td>
+                                                <td><span class="status status-enabled"></span>Активен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal7">
+                                                <td>Logging</td>
+                                                <td>Система сбора логов</td>
+                                                <td>10.0.0.244</td>
+                                                <td><span class="status status-enabled"></span>Активен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal8">
+                                                <td>Radius</td>
+                                                <td>Сервер авторизации</td>
+                                                <td>10.0.0.249</td>
+                                                <td><span class="status status-enabled"></span>Активен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal9">
+                                                <td>Selenoid</td>
+                                                <td>Сервер тестирование веб приложений</td>
+                                                <td>10.0.0.248</td>
+                                                <td><span class="status status-enabled"></span>Активен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal10">
+                                                <td>SMS</td>
+                                                <td>SMS шлюз</td>
+                                                <td>10.0.0.231</td>
+                                                <td><span class="status status-enabled"></span>Активен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal11">
+                                                <td>vavilov</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><span class="status status-disabled"></span>Неактивен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal12">
+                                                <td>VOIP</td>
+                                                <td>Сервер телефонии для авторизации</td>
+                                                <td>10.0.0.245</td>
+                                                <td><span class="status status-disabled"></span>Неактивен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal13">
+                                                <td>VOIP2</td>
+                                                <td>Сервер телефонии для техподдержки</td>
+                                                <td>10.0.0.246; 95.213.150.142</td>
+                                                <td><span class="status status-disabled"></span>Неактивен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal14">
+                                                <td>VPN</td>
+                                                <td>Бывший сервер доступа, в данный момент не используется</td>
+                                                <td>10.0.0.250; 95.213.150.140</td>
+                                                <td><span class="status status-disabled"></span>Неактивен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal15">
+                                                <td>WEB</td>
+                                                <td>Площадка со всеми веб проектами</td>
+                                                <td>10.0.0.252</td>
+                                                <td><span class="status status-enabled"></span>Активен</td>
+                                            </tr>
+                                            <tr class="server modal-trigger" data-target="modal16">
+                                                <td>Zabbix</td>
+                                                <td>Система мониторинга</td>
+                                                <td>10.0.0.251</td>
+                                                <td><span class="status status-enabled"></span>Активен</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- Модалки с доп инфой о сервере -->
+                                    <div id="modal1" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal2" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                    <li>
+                                                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                        <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                        Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                        Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                        Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                        Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                        Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                        Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                        Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                        Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                        Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                    </li>
+                                                </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal3" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                                <ul class="collapsible">
+                                                    <li>
+                                                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                        <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                        Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                        Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                        Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                        Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                        Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                        Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                        Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                        Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                        Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal4" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal5" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal6" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">                                
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal7" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal8" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal9" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal10" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal11" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal12" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal13" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal14" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal15" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <div id="modal16" class="modal">
+                                        <div class="modal-content">
+                                            <h4>Информация о сервере</h4>
+                                            <div class="card">
+                                                <table class="striped dataTable datatable-example" role="grid">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Загрузка ЦП</td>
+                                                            <td>100%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 2</td>
+                                                            <td>80%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Загрузка ЦП 3</td>
+                                                            <td>900%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 1</td>
+                                                            <td>50℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 2</td>
+                                                            <td>70℃</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Температура ядра 3</td>
+                                                            <td>80℃</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="collapsible">
+                                                <li>
+                                                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>Развернуть логи сервера</div>
+                                                    <div class="collapsible-body"><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis et architecto ea commodi. Magnam sint assumenda mollitia recusandae magni numquam quisquam possimus eos vitae iusto temporibus distinctio, repudiandae tenetur repellat!
+                                                    Velit debitis nostrum recusandae explicabo possimus magnam suscipit, dolorem saepe rerum est eos quo officiis laboriosam sit vero soluta ex praesentium obcaecati cum ipsam quae iste assumenda dicta eveniet! Voluptate.
+                                                    Hic vero dignissimos molestiae eius cumque obcaecati, voluptas natus, harum eligendi, ut qui iste voluptatibus velit. Qui quia incidunt error laudantium eveniet. Ut nihil labore amet ipsa tempora autem vero.
+                                                    Saepe sequi accusamus animi dignissimos similique quam odio necessitatibus excepturi repellat dicta dolorem dolore impedit, perferendis, numquam cum, natus iste nihil sit eveniet. Obcaecati dignissimos illo necessitatibus totam esse repellat.
+                                                    Sequi commodi hic in! Laborum, nam alias. Consequatur dolorem, eaque, ullam architecto est quam iste nemo vitae quae maxime a ex beatae quaerat! At facilis suscipit exercitationem error esse? Aperiam!
+                                                    Voluptatibus eum deserunt at. Quae possimus alias aliquam voluptatem ipsa dolorum eveniet. Cum, consequatur? Nemo hic sapiente est? Expedita officia cupiditate soluta tempora numquam fugiat repellendus magnam neque! Quidem, consequatur.
+                                                    Nulla ea porro similique doloribus repellat, alias repudiandae eveniet enim illum adipisci quas debitis officiis aliquid esse sunt distinctio numquam ut sequi placeat veritatis impedit hic vitae dolore ratione! Eius.
+                                                    Dolorem aut neque voluptates beatae laborum reiciendis, perspiciatis delectus similique id maxime dolorum fuga, ducimus asperiores. Quidem, veritatis. Eveniet iste dolores ratione perspiciatis consequatur dolor repudiandae soluta ab adipisci vero?
+                                                    Ratione molestiae, error sapiente quia dolores soluta voluptatem unde, blanditiis quidem explicabo cupiditate, eaque amet totam facilis quam reprehenderit perspiciatis libero. Animi consequatur aperiam quos, iusto reprehenderit numquam repudiandae error?
+                                                    Exercitationem atque perferendis nulla accusamus fuga enim ipsum natus cupiditate molestias nostrum magnam dolore eveniet iste consequatur pariatur iusto quis, voluptas, nesciunt esse omnis? Magni quas quis dolores fugit voluptatem.
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa magnam id, iure ducimus nam tenetur voluptate vero suscipit cum nobis sequi quae quo optio porro, debitis nostrum alias doloremque!</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                        </div>
+                                    </div>
+                                    <!-- /// -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Javascripts -->
+    <script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
+    <script src="assets/plugins/materialize/js/materialize.min.js"></script>
+    <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
+    <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCzjeZ1lORVesmjaaFu0EbYeTw84t1_nek"></script>
+    <script src="assets/js/alpha.min.js"></script>
+    <script src="assets/js/pages/checkbox.js"></script>
+
+
+</body>
+
+</html>
