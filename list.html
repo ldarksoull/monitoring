@@ -181,28 +181,28 @@
 
     <main class="mn-inner ">
 <style>
-    .pay .header {
+    .header {
         display: flex;
         align-items: center;
     }
-    .pay .header .block.-left {
+    .header .block.-left {
         margin-right: auto;
     }
-    .pay .header .block.-right {
+    .header .block.-right {
         display: flex;
         align-items: center;
         margin-left: auto;
     }
-    .pay .header .block .page-title.page-title_new {
+    .header .block .page-title.page-title_new {
         margin-bottom: 0;
     }
-    .pay .header .block .tel {
+    .header .block .tel {
         color: #0277bb;
         font-weight: bold;
         text-transform: uppercase;
         margin-right: 15px;
     }
-    .pay .personal-account{
+    .personal-account{
         padding-right: 15px;
         padding-left: 15px;
         line-height: 30px;
@@ -252,22 +252,69 @@
     .adress-cell{
         min-width: 130px;
     }
+    .search-form{
+        margin-right: 40px;
+    }
+    .input-field{
+        margin: 0;
+    }
+    .search-input{
+        margin: 0!important;
+        color: #555!important;
+        height: 2.2rem!important;
+        padding-right: 20px!important;
+    }
+    .input-field .prefix{
+        right: -20px;
+        font-size: 24px!important;
+        top: 5px;
+        width: auto;
+    }
+    .sortByUse{
+        margin-right: 20px;
+    }
+    .sortByUse label{
+        padding-left: 25px;
+    }
+    .btn-log{
+        margin-right: 20px;
+    }
+    .groups{
+        display: flex;
+        align-items: baseline;
+    }
+    .select-wrapper input.select-dropdown{
+        margin: 0;
+    }
+    .grp-edit{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .btn-edit-wrap{
+        margin: 10px;
+    }
+    #group-delete{
+        overflow: visible
+    }
+    .grp-edit-modal{
+        max-width: 450px;
+        min-width: 300px;
+    }
     @media (max-width: 768px) {
-        .pay .header {
+        .header {
             flex-direction: column;
             align-items: flex-start;
         }
-        .pay .header .block.-right {
+        .header .block.-right {
             margin-right: 0;
-            margin-left: 0;
         }
-        .pay .header .block.-left{
+        .header .block.-left{
             margin-bottom: 10px;
         }
     }
     @media (max-width: 630px){
-        .pay .header .block.-right{
-            flex-direction: column;
+        .header .block.-right{
+            width: 100%;
             align-items: baseline;
         }
     }
@@ -280,10 +327,22 @@
             margin-top: 10px;
         }
     }
+    @media (max-width: 530px){
+        .header .block.-right{
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .sortByUse{
+            margin-bottom: 10px;
+        }
+        .search-form{
+            margin-bottom: 10px;
+        }
+    }
     
 </style>
 
-    <div class="row pay">
+    <div class="row">
             <div class="row">
                 <div class="col s12">
                     <div class="header">
@@ -291,6 +350,20 @@
                             <div class="page-title page-title_new">Общий список заведений</div>
                         </div>
                         <div class="block -right">
+                                
+                            <div class="sortByUse">
+                                <input class="chk-all"  type="checkbox" id="checkusage">
+                                <label for="checkusage" title="Сортировать">По частоте посещения</label>
+                            </div>
+                            <form class="search-form">
+                                <div class="input-field">
+                                    <i class="material-icons prefix">search</i>
+                                    <input id="search" class="search-input" type="search" placeholder="Поиск" autocomplete="off">
+                                    <label for="search" class="active"><i class="material-icons search-icon">search</i></label>
+                                </div>
+                                <a href="javascript: void(0)" class="close-search"><i class="material-icons">close</i></a>
+                            </form>
+                            
                             <button class="dropdown-button button-new" data-activates="download">Скачать</button>
                             <ul class="dropdown-content" id="download">
                                 <li><a href="#">PDF</a></li>
@@ -299,53 +372,91 @@
                         </div>
                     </div>
                 </div>
+               
             </div>
-
+            <div class="row groups">
+                    <div class="input-field col s3">
+                        <select>
+                            <option value="" disabled selected>Группа</option>
+                            <option value="1">Общая</option>
+                            <option value="2">Избранное</option>
+                            <option value="3">Группа 2</option>
+                            <option value="4">Группа 3</option>
+                        </select>
+                    </div>
+                    <div class="col s9">
+                        <div class="grp-edit">
+                            <div class="">
+                                <a class="waves-effect waves-light button-new modal-trigger" href="#group-delete">Удалить</a>
+                                <div id="group-delete" class="modal grp-edit-modal">
+                                    <div class="modal-content">
+                                    <h4>Удалить группу</h4>
+                                    <select>
+                                        <option value="" disabled selected>Группа</option>
+                                        <option value="1">Общая</option>
+                                        <option value="2">Избранное</option>
+                                        <option value="3">Группа 2</option>
+                                        <option value="4">Группа 3</option>
+                                    </select>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <a href="#" class="modal-close waves-effect waves-green btn-flat">Удалить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-l-sm">
+                            <a class="waves-effect waves-light button-new modal-trigger" href="#group-create">Создать</a>
+                            <div id="group-create" class="modal grp-edit-modal">
+                                <div class="modal-content">
+                                <h4>Создать группу</h4>
+                                <div class="input-field">
+                                    <input id="group" class="group-input" type="text" placeholder="Имя группы" autocomplete="off">
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                <a href="#" class="modal-close waves-effect waves-green btn-flat">Создать</a>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
             <div class="col s12">
                 <div class="card no-m-b">
                     <div class="card-content">
                         <div id="example_wrapper" class="dataTables_wrapper">
                             <div class="tabel-wrap">
                                 <table class="striped dataTable datatable-example table table-bordered table-hover" role="grid">
-                                    <colgroup>
-                                        <col width="36px">
-                                    </colgroup>
                                     <thead>
                                         <tr class="dnd-moved">
-                                            <th>
-                                                <input class="chk-all" name=g1 type="checkbox" id="checkbox-1" >
-                                                <label for="checkbox-1" title="Выбрать все"></label>
-                                            </th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Название заведения">Название заведения</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Категория заведения">Категория заведения</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Владелец заведения">Владелец заведения</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Название заведения">Название</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Категория заведения">Категория</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Владелец заведения">Владелец</th>
                                             <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Дилер">Дилер</th>
                                             <th class="sorting adress-cell" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Адрес">Адрес</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Дата регистрации дилера и владельца заведения">Дата регистрации дилера и владельца заведения</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Дата регистрации дилера и владельца заведения">Дата регистрации дилера и владельца</th>
                                             <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Наличие заключенного договора">Наличие заключенного договора </th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Дата последней авторизации дилера и владельца заведения в лк">Дата последней авторизации дилера и владельца заведения в лк</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Дата создания заведения">Дата создания заведения</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Дата активации услуг заведения">Дата активации услуг заведения</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Дата последней авторизации дилера и владельца заведения в лк">Дата последней авторизации дилера и владельца в лк</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Дата создания заведения">Дата создания</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Дата активации услуг заведения">Дата активации услуг</th>
                                             <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Дата последней клиентской авторизации на роутере">Дата последней клиентской авторизации на роутере</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Количество клиентских авторизаций на роутере заведения">Количество клиентских авторизаций на роутере заведения</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Модель роутера заведения">Модель роутера заведения</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Версия прошивки роутера заведения">Версия прошивки роутера заведения</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Версия обновления конфигурации роутера заведения">Версия обновления конфигурации роутера заведения</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Дата и время последней активности (нахождения в сети) роутера заведения">Дата и время последней активности (нахождения в сети) роутера заведения</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Купленный продукт для заведения">Купленный продукт для заведения</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Символьное имя заведения">Символьное имя заведения</th>
-                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="ip адрес роутера заведения">ip адрес роутера заведения</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Количество клиентских авторизаций на роутере заведения">Количество клиентских авторизаций на роутере</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Модель роутера заведения">Модель роутера</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Версия прошивки роутера заведения">Версия прошивки роутера</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Версия обновления конфигурации роутера заведения">Версия обновления конфигурации роутера</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Дата и время последней активности (нахождения в сети) роутера заведения">Дата и время последней активности (нахождения в сети) роутера</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Купленный продукт для заведения">Купленный продукт для</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Символьное имя заведения">Символьное имя</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="ip адрес роутера заведения">ip адрес роутера</th>
                                             <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Загрузка ЦПУ роутера">Загрузка ЦПУ роутера</th>
                                             <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Индикатор услуг">Индикатор услуг</th>
-                                            <th>Добавить в избранное</th>
+                                            <th class="sorting">Система логирования</th>
+                                            <th class="sorting">Группа</th>
+                                            <th class="sorting">В избранное</th>
                                         </tr>
                                     </thead>
                                     <tbody class="js-list">
                                         <tr class="dnd-moved">
-                                            <td>
-                                                <input type="checkbox" name=g1 id="checkbox-2">
-                                                <label for="checkbox-2"></label>
-                                            </td>
                                             <td>Кафе “Елка”</td>
                                             <td>Рестораны</td>
                                             <td>Василий Пупкин</td>
@@ -370,19 +481,74 @@
                                             <td>80%</td>
                                             <td>Вкл.</td>
                                             <td>
+                                                <a href="#" class="btn-log" title="перейти к системе логирования">Логи</a>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option value="" disabled selected>Группа</option>
+                                                    <option value="1">Избранное</option>
+                                                    <option value="2">Группа 1</option>
+                                                    <option value="3">Группа 2</option>
+                                                    <option value="4">Группа 3</option>
+                                                </select>
+                                            </td>
+                                            <td>
                                                 <div class="switch">
                                                     <label>
                                                         <input type="checkbox">
-                                                        <span class="lever no-m-r"></span>
+                                                        <span class="lever no-m-l"></span>
+                                                    </label>
+                                                </div>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr class="dnd-moved">
+                                            <td>Кафе “Елка”</td>
+                                            <td>Рестораны</td>
+                                            <td>Василий Пупкин</td>
+                                            <td>Иван Иванов</td>
+                                            <td>Ростов-на-Дону,  ул. Пушкинса,д. 52</td>
+                                            <td>27.09.2019</td>
+                                            <td>Реквизиты</td>
+                                            <td>27.09.2019</td>
+                                            <td>27.09.2019</td>
+                                            <td>27.10.2019</td>
+                                            <td>27.10.2019</td>
+                                            <td>119</td>
+                                            <td>Asus rt-n10e</td>
+                                            <td>1.3.23.4.5.1</td>
+                                            <td>1.300.5.1</td>
+                                            <td>27.10.2019 <br>
+                                                13:03
+                                            </td>
+                                            <td>Банан</td>
+                                            <td>№;%"%</td>
+                                            <td>34.13.55.23</td>
+                                            <td>80%</td>
+                                            <td>Вкл.</td>
+                                            <td>
+                                                <a href="#" class="btn-log" title="перейти к системе логирования">Логи</a>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option value="" disabled selected>Группа</option>
+                                                    <option value="1">Избранное</option>
+                                                    <option value="2">Группа 1</option>
+                                                    <option value="3">Группа 2</option>
+                                                    <option value="4">Группа 3</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <div class="switch">
+                                                    <label>
+                                                        <input type="checkbox">
+                                                        <span class="lever no-m-l"></span>
                                                     </label>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr class="dnd-moved">
-                                            <td>
-                                                <input type="checkbox" name=g1 id="checkbox-3">
-                                                <label for="checkbox-3"></label>
-                                            </td>
+                                           
                                             <td>Кафе “Елка”</td>
                                             <td>Рестораны</td>
                                             <td>Василий Пупкин</td>
@@ -407,19 +573,28 @@
                                             <td>80%</td>
                                             <td>Вкл.</td>
                                             <td>
+                                                <a href="#" class="btn-log" title="перейти к системе логирования">Логи</a>
+                                            </td>                                          
+                                            <td>
+                                                <select>
+                                                    <option value="" disabled selected>Группа</option>
+                                                    <option value="1">Избранное</option>
+                                                    <option value="2">Группа 1</option>
+                                                    <option value="3">Группа 2</option>
+                                                    <option value="4">Группа 3</option>
+                                                </select>
+                                            </td>
+                                            <td>
                                                 <div class="switch">
                                                     <label>
                                                         <input type="checkbox">
-                                                        <span class="lever no-m-r"></span>
+                                                        <span class="lever no-m-l"></span>
                                                     </label>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr class="dnd-moved">
-                                            <td>
-                                                <input type="checkbox" name=g1 id="checkbox-4">
-                                                <label for="checkbox-4"></label>
-                                            </td>
+                                            
                                             <td>Кафе “Елка”</td>
                                             <td>Рестораны</td>
                                             <td>Василий Пупкин</td>
@@ -444,19 +619,28 @@
                                             <td>80%</td>
                                             <td>Вкл.</td>
                                             <td>
+                                                <a href="#" class="btn-log" title="перейти к системе логирования">Логи</a>
+                                            </td>
+                                            <td>
+                                                <select>
+                                                    <option value="" disabled selected>Группа</option>
+                                                    <option value="1">Избранное</option>
+                                                    <option value="2">Группа 1</option>
+                                                    <option value="3">Группа 2</option>
+                                                    <option value="4">Группа 3</option>
+                                                </select>
+                                            </td>
+                                            <td>
                                                 <div class="switch">
                                                     <label>
                                                         <input type="checkbox">
-                                                        <span class="lever no-m-r"></span>
+                                                        <span class="lever no-m-l"></span>
                                                     </label>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr class="dnd-moved">
-                                            <td>
-                                                <input type="checkbox" name=g1 id="checkbox-5">
-                                                <label for="checkbox-5"></label>
-                                            </td>
+                                        
                                             <td>Кафе “Елка”</td>
                                             <td>Рестораны</td>
                                             <td>Василий Пупкин</td>
@@ -481,47 +665,22 @@
                                             <td>80%</td>
                                             <td>Вкл.</td>
                                             <td>
-                                                <div class="switch">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <span class="lever no-m-r"></span>
-                                                    </label>
-                                                </div>
+                                                <a href="#" class="btn-log" title="перейти к системе логирования">Логи</a>
                                             </td>
-                                        </tr>
-                                        <tr class="dnd-moved">
                                             <td>
-                                                <input type="checkbox" name=g1 id="checkbox-6">
-                                                <label for="checkbox-6"></label>
+                                                <select>
+                                                    <option value="" disabled selected>Группа</option>
+                                                    <option value="1">Избранное</option>
+                                                    <option value="2">Группа 1</option>
+                                                    <option value="3">Группа 2</option>
+                                                    <option value="4">Группа 3</option>
+                                                </select>
                                             </td>
-                                            <td>Кафе “Елка”</td>
-                                            <td>Рестораны</td>
-                                            <td>Василий Пупкин</td>
-                                            <td>Иван Иванов</td>
-                                            <td>Ростов-на-Дону,  ул. Пушкинса,д. 52</td>
-                                            <td>27.09.2019</td>
-                                            <td>Реквизиты</td>
-                                            <td>27.09.2019</td>
-                                            <td>27.09.2019</td>
-                                            <td>27.10.2019</td>
-                                            <td>27.10.2019</td>
-                                            <td>119</td>
-                                            <td>Asus rt-n10e</td>
-                                            <td>1.3.23.4.5.1</td>
-                                            <td>1.300.5.1</td>
-                                            <td>27.10.2019 <br>
-                                                13:03
-                                            </td>
-                                            <td>Банан</td>
-                                            <td>№;%"%</td>
-                                            <td>34.13.55.23</td>
-                                            <td>80%</td>
-                                            <td>Вкл.</td>
                                             <td>
                                                 <div class="switch">
                                                     <label>
                                                         <input type="checkbox">
-                                                        <span class="lever no-m-r"></span>
+                                                        <span class="lever no-m-l"></span>
                                                     </label>
                                                 </div>
                                             </td>

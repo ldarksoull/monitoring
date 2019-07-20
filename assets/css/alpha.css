@@ -1342,13 +1342,13 @@ nav .nav-wrapper ul li span.badge {
         height: 60px;
     }
 
-    .input-field input[type=search] {
+    /* .input-field input[type=search] {
         color: rgba(0,0,0,0.6)!important;
         line-height: 60px;
         padding: 0 54.5px 0 76.5px!important;
         font-weight: normal;
         width: calc(100% - 130.5px);
-    }
+    } */
 
     .input-field input[type=search]:focus {
         color: #333!important;
