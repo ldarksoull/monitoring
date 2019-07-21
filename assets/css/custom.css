@@ -1413,77 +1413,6 @@ td.user-blocked .user-name {
     background-position: 50% 50%;
 }
 
-.new-carousel__button.new-carousel__button_prev {
-    margin-right: 15px;
-}
-
-.new-carousel__button.new-carousel__button_prev::after {
-    background-image: url('../images/arrow-left.png');
-}
-
-.new-carousel__button.new-carousel__button_prev.active:after {
-    background-image: url('../images/arrow-left-active.png');
-}
-
-.new-carousel__button.new-carousel__button_next {
-    margin-left: 15px;
-}
-
-.new-carousel__button.new-carousel__button_next::after {
-    background-image: url('../images/arrow-right.png');
-}
-
-.new-carousel__button.new-carousel__button_next.active:after {
-    background-image: url('../images/arrow-right-active.png');
-}
-
-.modal.modal_no-history {
-    width: 320px;
-}
-
-.modal.modal_no-history .modal-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 210px;
-    text-align: center;
-}
-
-.page-title.page-title_new {
-    line-height: 23px;
-}
-
-.m-v-n-xs {
-    margin-left: -10px;
-    margin-right: -10px;
-}
-.look-reviews {
-    overflow-x: auto;
-}
-
-.default-styles-none {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.isCollapse {
-    cursor: pointer;
-}
-
-.stars {
-    display: flex;
-}
-
-.stars i {
-    width: 15px
-}
-
-.stars_big i {
-    overflow: hidden;
-    font-size: 25px;
-    width: 30px;
-}
 
 .material-icons_blue {
     color: rgb(2, 119, 187);
@@ -1492,5 +1421,11 @@ td.user-blocked .user-name {
     display: flex!important;
     justify-content: center;
     align-items: center;
+}
+.modal-trigger{
+    cursor: pointer;
+}
+.collapse-table{
+    padding: 10px 1rem;
 }
 

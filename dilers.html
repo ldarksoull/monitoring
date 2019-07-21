@@ -113,12 +113,10 @@
     <aside id="slide-out"
            class="side-nav white fixed">
         <div class="side-nav-wrapper" style="padding-bottom:0">
-
             <div class="sidebar-profile">
                 <div class="sidebar-profile-image">
                     <img src="assets/images/profile-image-3.jpg" class="circle"
                          alt="Фото пользователя">
-
                 </div>
                 <div class="sidebar-profile-info">
                     <a href="" class="account-settings-link">
@@ -127,7 +125,6 @@
                     </a>
                 </div>
             </div>
-
             <hr class="sidebar-separator">
             <ul class="sidebar-menu collapsible collapsible-accordion">
                 <li class="no-padding">
@@ -136,14 +133,14 @@
                         <span class="sidebar-menu-item-name">Мониторинг сервиса</span>
                     </a>
                 </li>
-                <li class="no-padding active">
+                <li class="no-padding ">
                     <a href="list.html" class="waves-effect waves-grey">
                         <i class="material-icons">list</i>
                         <span class="sidebar-menu-item-name">Общий список</span>
                     </a>
                 </li>
-                <li class="no-padding">
-                    <a href="#" class="waves-effect waves-grey active">
+                <li class="no-padding active">
+                    <a href="#" class="waves-effect waves-grey">
                         <i class="material-icons">people</i>
                         <span class="sidebar-menu-item-name">Дилеры</span>
                     </a>
@@ -181,28 +178,28 @@
 
     <main class="mn-inner ">
 <style>
-    .pay .header {
+    .header {
         display: flex;
         align-items: center;
     }
-    .pay .header .block.-left {
+    .header .block.-left {
         margin-right: auto;
     }
-    .pay .header .block.-right {
+    .header .block.-right {
         display: flex;
         align-items: center;
         margin-left: auto;
     }
-    .pay .header .block .page-title.page-title_new {
+    .header .block .page-title.page-title_new {
         margin-bottom: 0;
     }
-    .pay .header .block .tel {
+    .header .block .tel {
         color: #0277bb;
         font-weight: bold;
         text-transform: uppercase;
         margin-right: 15px;
     }
-    .pay .personal-account{
+    .personal-account{
         padding-right: 15px;
         padding-left: 15px;
         line-height: 30px;
@@ -253,20 +250,20 @@
         min-width: 130px;
     }
     @media (max-width: 768px) {
-        .pay .header {
+        .header {
             flex-direction: column;
             align-items: flex-start;
         }
-        .pay .header .block.-right {
+        .header .block.-right {
             margin-right: 0;
             margin-left: 0;
         }
-        .pay .header .block.-left{
+        .header .block.-left{
             margin-bottom: 10px;
         }
     }
     @media (max-width: 630px){
-        .pay .header .block.-right{
+        .header .block.-right{
             flex-direction: column;
             align-items: baseline;
         }
@@ -291,7 +288,7 @@
         <link rel='stylesheet' href='/point/item/users.list.select-date.css' type="text/css"/>
         <link rel='stylesheet' href='/point/item/users.list.calendar.css' type="text/css"/>-->
 
-    <div class="row pay">
+    <div class="row">
             <div class="row">
                 <div class="col s12">
                     <div class="header">
@@ -336,7 +333,7 @@
                                                 <input type="checkbox" name=g1 id="checkbox-2">
                                                 <label for="checkbox-2"></label>
                                             </td>
-                                            <td>имя</td>
+                                            <td class="modal-trigger" data-target="modal">имя</td>
                                             <td>Кафе “Елка”</td>
                                             <td>Василий Пупкин</td>
                                             <td>Ростов-на-Дону,  ул. Пушкинса,д. 52</td>
@@ -346,7 +343,7 @@
                                                 <input type="checkbox" name=g1 id="checkbox-3">
                                                 <label for="checkbox-3"></label>
                                             </td>
-                                            <td>имя</td>
+                                            <td class="modal-trigger" data-target="modal">имя</td>
                                             <td>Кафе “Елка”</td>
                                             <td>Василий Пупкин</td>
                                             <td>Ростов-на-Дону,  ул. Пушкинса,д. 52</td>
@@ -356,7 +353,7 @@
                                                 <input type="checkbox" name=g1 id="checkbox-4">
                                                 <label for="checkbox-4"></label>
                                             </td>
-                                            <td>имя</td>
+                                            <td class="modal-trigger" data-target="modal">имя</td>
                                             <td>Кафе “Елка”</td>
                                             <td>Василий Пупкин</td>
                                             <td>Ростов-на-Дону,  ул. Пушкинса,д. 52</td>
@@ -366,7 +363,7 @@
                                                 <input type="checkbox" name=g1 id="checkbox-5">
                                                 <label for="checkbox-5"></label>
                                             </td>
-                                            <td>имя</td>
+                                            <td class="modal-trigger" data-target="modal">имя</td>
                                             <td>Кафе “Елка”</td>
                                             <td>Василий Пупкин</td>
                                             <td>Ростов-на-Дону,  ул. Пушкинса,д. 52</td>
@@ -376,7 +373,7 @@
                                                 <input type="checkbox" name=g1 id="checkbox-6">
                                                 <label for="checkbox-6"></label>
                                             </td>
-                                            <td>имя</td>
+                                            <td class="modal-trigger" data-target="modal">имя</td>
                                             <td>Кафе “Елка”</td>
                                             <td>Василий Пупкин</td>
                                             <td>Ростов-на-Дону,  ул. Пушкинса,д. 52</td>
@@ -413,7 +410,67 @@
                 </div>
             </div>
         </div>
-
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h4>Дилер {{ имя дилера }}</h4>
+                <div class="card">
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header">Заведения</div>
+                            <div class="collapsible-body collapse-table">
+                                <table class="striped dataTable datatable-example" role="grid">
+                                    <thead>
+                                        <tr class="dnd-moved">
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Название заведения">Название</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Категория заведения">Категория</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Владелец заведения">Владелец</th>
+                                            <th class="sorting adress-cell" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Адрес">Адрес</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="js-list">
+                                        <tr>
+                                            <td>Кафе “Елка”</td>
+                                            <td>Рестораны</td>
+                                            <td>Василий Пупкин</td>
+                                            <td>Ростов-на-Дону,  ул. Пушкинса,д. 52</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header">Сети заведений</div>
+                            <div class="collapsible-body collapse-table collapsible">
+                                <table class="striped dataTable datatable-example" role="grid">
+                                    <thead>
+                                        <tr class="dnd-moved">
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Название заведения">Название сети</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Категория заведения">Категория</th>
+                                            <th class="sorting" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Владелец заведения">Владелец</th>
+                                            <th class="sorting adress-cell" aria-controls="example" rowspan="1" colspan="1" aria-sort="descending" title="Адрес">Адрес</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="js-list">
+                                        <tr>
+                                            <td>Кафе “Елка”</td>
+                                            <td>Рестораны</td>
+                                            <td>Василий Пупкин</td>
+                                            <td>Ростов-на-Дону,  ул. Пушкинса,д. 52</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                    </ul>
+                   
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+        </div>
     </main>
 
 </div>
